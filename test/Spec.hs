@@ -46,7 +46,7 @@ checkUniqueConstraint = Test "Unique Constraint - Name"
 
 checkCheckConstraint :: Test (DatabaseResponse ())
 checkCheckConstraint = Test "Check Constraint - Age"
-                            (Left $ SQLConstraintError Check "Test")
+                            (Left $ SQLConstraintError Check "age > 0")
                             test
   where
     test conn = runDBAction $ execute conn insertSQL sqlData

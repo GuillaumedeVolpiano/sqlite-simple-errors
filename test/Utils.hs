@@ -8,6 +8,7 @@ module Utils
 , executeTestRunner
 )where
 
+import Control.Monad (when, unless)
 import Control.Monad.State
 import Database.SQLite.Simple (open, close, execute_, Connection)
 import SQLUtils
